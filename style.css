@@ -94,6 +94,7 @@ select{
     color: aliceblue;
     border-radius: 7px;
     border: 0;;
+    font-family: poppins medium;
 }
 .intro button:hover{
     background-color: rgba(255, 0, 0, 0.637);
