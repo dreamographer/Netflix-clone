@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: poppins,sans-serif;
+    font-family: sans-serif;
     box-sizing: border-box;
 }
 body{
@@ -50,7 +50,7 @@ nav{
     object-fit: cover;
 
 }
-nav button{
+button{
     font-size: 15px;
     border: 0;
     outline: 0;
@@ -76,6 +76,7 @@ select{
     height: 30px;
     border-radius: 7px;
     background-color: #e50914;
+    font-size: 14px;
 }
 .intro{
     font-size: 23px;
@@ -83,7 +84,7 @@ select{
     place-items:center ;
     text-align: center;
 }
-.intro input{
+input{
     width: 400px;
     height: 50px;
     background-color: #11101094;
@@ -96,7 +97,7 @@ select{
     outline: 0;
     border-radius: 7px;
 }
-.intro button{
+button{
     width: 200px;
     height: 50px;
     background-color: #e50914;
@@ -107,7 +108,7 @@ select{
     border: 0;;
     font-family: poppins medium;
 }
-.intro button:hover{
+button:hover{
     background-color: rgba(255, 0, 0, 0.637);
 }
 
@@ -182,31 +183,53 @@ summary {
   .ans {
     text-align: left;
     margin: 1px 200px 10px 150px;
-    padding: 30px;
-    background-color: #2d2d2d;
+    padding: 30px 30px 30px 30px;
+    background: #2d2d2d;
+    max-height: 0px;
+    overflow: hidden;
     list-style: none;
     font-size: 20px;
-    
+    transition: max-height 3s ease-in, opacity 0.3s ease;
   }
   
   summary::before {
     content: "+";
-    font-size: 50px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-family: poppins light;
     float: right;
-    margin-top: -25px; 
+    margin-top: -20px; 
+    transition: transform 0.5s;
     
   }
-  
+  details[open] .ans{
+    max-height: 600px;
+    transition: max-height 3s ease-in;
+  }
   details[open] summary::before {
-    content: "x";
+    transform: rotate(130deg);
     
   }
-  details:not([open]) .ans {
-    display: none;
+  .bottom {
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  details[open] ~ details .ans {
-    display: none;
-  }
-  
+table{
+    display: flex;
+    justify-content: center;
+    text-align: left;
+   padding: 50px;
+   width: 100%;
+
+}
+td{
+   width: 300px;
+   padding: 5px;
+   font-size: 14px;
+}
+a{
+    color: #b3b3b3;
+}
