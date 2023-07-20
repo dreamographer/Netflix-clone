@@ -34,7 +34,7 @@ p{
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.808)),url(https://assets.nflxext.com/ffe/siteui/vlv3/bff5732c-7d13-45d1-9fab-476db25a1827/46bc87cd-4c4c-4485-8b93-d5f21c581d56/IN-en-20230710-popsignuptwoweeks-perspective_alpha_website_small.jpg);
     background-size: cover;
     background-position:center;
-    padding:30px 8% ;
+    padding:30px 8px ;
     position: relative;
 }
 nav{
@@ -61,7 +61,7 @@ button{
     
 }
 select{
-    font-size: 19px;
+    font-size: 15px;
     background-color: transparent;
     color: white;
     border-radius: 5px;
@@ -80,8 +80,6 @@ select{
 }
 .intro{
     font-size: 23px;
-    
-    place-items:center ;
     text-align: center;
 }
 input{
@@ -128,6 +126,7 @@ button:hover{
 .text-col{
     width: 35%;
     overflow: hidden;
+    z-index: 2;
 }
 .img-col {
     position: relative;
@@ -233,3 +232,20 @@ td{
 a{
     color: #b3b3b3;
 }
+@media only screen and (max-width: 1181px) {
+    .row{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+.text-col{
+    width: 35%;
+}
+.img-col {
+    position: relative;
+    width: 40%;
+  }
+  }
